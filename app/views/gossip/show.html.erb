@@ -1,0 +1,6 @@
+<h1>Gossip: <%= Gossip.find(params[:id]).title%></h1><br>
+<h3>Date de création: <%= Gossip.find(params[:id]).created_at%></h3>
+<h3>Voici le contenu du gossip:  "<%= Gossip.find(params[:id]).content%>"</h3>
+<h3>Et voici l'auteur: <%= Gossip.find(params[:id]).user.first_name%></h3>
+<p>Tu peux aller voir la page de l'auteur en cliquant <a href="/user/<%=Gossip.find(params[:id]).user.id%>"> ici</a> </p>
+<%= link_to "Retour a la page d'accueil", accueil_path %>

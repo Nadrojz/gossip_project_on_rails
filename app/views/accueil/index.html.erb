@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <meta charset="utf-8">
+    <title>Accueil</title>
+  </head>
+  <body>
+        <h2>Tu es sur la page d'accueil</h2><br><br>
+        <h3>Ci dessous la liste des potins :</h3><br>
+
+  <% @gossips.each do |gossip| %>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Auteur du potin : <%= gossip.user.first_name %></h5>
+      <p class="card-text">Titre du potin : <%= gossip.title %></p>
+      <a href="/gossips/<%=gossip.id%>" class="btn btn-primary">Lien vers la page du potin</a>
+    </div>
+  </div>
+
+  <% end %>
+  </body>
+</html>

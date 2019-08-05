@@ -1,0 +1,14 @@
+<h1>Bienvenue sur le profil de : </h1>
+  <h2><%= User.find(params[:id]).first_name %>
+  <%= User.find(params[:id]).last_name %></h2><br>
+<h3>Description :
+  <%= User.find(params[:id]).description%></h3><br>
+<h3>email :
+  <%= User.find(params[:id]).email%></h3><br>
+<h3>Age :
+  <%= User.find(params[:id]).age%> ans</h3><br>
+<h3>Ville :
+  <%= User.find(params[:id]).city.name%></h3><br>
+<h3>Membre depuis le :
+  <%= User.find(params[:id]).created_at%></h3><br>
+<%= link_to "Retour a la page d'accueil", accueil_path %>
