@@ -1,6 +1,6 @@
 # README
 
-###Description des différentes pages disponibles dans l'application :
+### Description des différentes pages disponibles dans l'application :
 
 / : Welcome page qui affiche un message de bienvenue.
 
